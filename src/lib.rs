@@ -39,6 +39,8 @@ mod functions {
     sql_function!(fn length(x: TsVector) -> Integer);
     sql_function!(fn numnode(x: TsQuery) -> Integer);
     sql_function!(fn plainto_tsquery(x: Text) -> TsQuery);
+    sql_function!(fn websearch_to_tsquery(x: Nullable<Text>, y: Text) -> TsQuery);
+    sql_function!(fn phraseto_tsquery(x: Nullable<Text>, y: Text) -> TsQuery);
     sql_function!(fn querytree(x: TsQuery) -> Text);
     sql_function!(fn strip(x: TsVector) -> TsVector);
     sql_function!(fn to_tsquery(x: Text) -> TsQuery);
